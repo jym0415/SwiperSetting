@@ -1,29 +1,24 @@
-window.onload(function(){
+window.onload=function(){
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('#mainbanner', {
         // Optional parameters
-        direction: 'vertical',
+        effect: "fade",
         loop: true,
-      
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
         // If we need pagination
         pagination: {
-          el: '.swiper-pagination',
+          el: '#mainbanner .swiper-pagination',
+          clickable : true,
         },
       
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '#mainbanner .swiper-button-next',
+          prevEl: '#mainbanner .swiper-button-prev',
         },
-      
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
+
       });
-
-
-
-
-
-});
+}
